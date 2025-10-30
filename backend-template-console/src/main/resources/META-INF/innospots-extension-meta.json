@@ -1,0 +1,68 @@
+{
+  "name": "${tpl.extension.name:Backend}",
+  "i18nNames": {
+    "en_US": "Backend",
+    "zh_CN": "Backend"
+  },
+  "version": "v1.0.0",
+  "icon": "/images/app.svg",
+  "publishTime": "2025-05-01",
+  "vendor": "Innospots",
+  "extKey": "backend-template",
+  "kernelVersion": "v1.0.0",
+  "description": "backend template",
+  "endpoints": ["/apps/micro-template"],
+  "basePackages": [
+    "io.innospots.backend.console"
+  ],
+  "modules": [
+    {
+      "name": "${tpl.menu.module:模块}",
+      "itemKey": "tpl-module",
+      "uri": "/dp/variable-manage",
+      "icon": "dp-variable-manage",
+      "i18nNames": {
+        "en_US": "Module",
+        "zh_CN": "模块"
+      },
+      "items": [
+        {
+          "name": "${dp.menu.variable.name:Page}",
+          "itemKey": "template-page",
+          "uri": "/",
+          "i18nNames": {
+            "en_US": "Plain Page",
+            "zh_CN": "页面"
+          }
+        },
+        {
+          "name": "${dp.menu.derived-variable.name:衍生变量}",
+          "itemKey": "derived-variable",
+          "uri": "/dp/derived-variable",
+          "i18nNames": {
+            "en_US": "Derived Variable",
+            "zh_CN": "衍生变量"
+          }
+        },
+        {
+          "name": "${dp.menu.variable.name:周期变量}",
+          "itemKey": "dp-cycle-variable",
+          "uri": "/dp/cycle-variable",
+          "i18nNames": {
+            "en_US": "Cycle Variable",
+            "zh_CN": "周期变量"
+          }
+        },
+        {
+          "name": "${dp.menu.function.name:函数}",
+          "itemKey": "dp-function",
+          "uri": "/dp/dp-function",
+          "i18nNames": {
+            "en_US": "Function",
+            "zh_CN": "函数"
+          }
+        }
+      ]
+    }
+  ]
+}
