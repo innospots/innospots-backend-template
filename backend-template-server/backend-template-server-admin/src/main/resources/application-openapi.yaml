@@ -1,0 +1,64 @@
+springdoc:
+  group-configs:
+    - group: libra-auth
+      packagesToScan:
+        - io.innospots.libra.security
+      paths-to-match:
+        - /**
+    - group: libra-project
+      packagesToScan:
+        - io.innospots.project
+      paths-to-match:
+        - /**
+    - group: libra-kernel
+      packagesToScan:
+        - io.innospots.libra.kernel
+      paths-to-match:
+        - /**
+      display-name: libra-kernel
+    - group: job-schedule
+      packagesToScan:
+        - io.innospots.schedule
+      paths-to-match:
+        - /**
+    - group: workflow-console
+      packagesToScan:
+        - io.innospots.workflow.console
+      paths-to-match:
+        - /**
+    - group: workflow-runtime
+      packagesToScan:
+        - io.innospots.workflow.runtime
+      paths-to-match:
+        - /**
+    - group: universal
+      packagesToScan:
+        - io.innospots.universal.session.console
+      paths-to-match:
+        - /**
+    - group: decision-pilot
+      packagesToScan:
+        - io.innospots.dp
+      paths-to-match:
+        - /**
+    - group: plugins
+      packagesToScan:
+        - io.innospots.plugins
+      paths-to-match:
+        - /**
+  show-actuator: true
+  open-api:
+    info:
+      title: Decision Pilot Open API
+      version: 2.3.0
+      description: Decision Pilot
+      summary: Decision Pilot
+      contact:
+        name: decision-pilot
+        url: https://www.innospots.com
+        email: info@innospots.com
+      license:
+        name: Apache License 2.0
+        url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+

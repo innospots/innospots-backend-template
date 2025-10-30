@@ -14,6 +14,9 @@
     <version>${backend-template.version}</version>
     <modules>
         <module>backend-template-core</module>
+        <module>backend-template-console</module>
+        <module>backend-template-server</module>
+        <module>backend-template-runtime</module>
     </modules>
 
     <properties>
@@ -27,6 +30,26 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.innospots</groupId>
+                <artifactId>backend-template-runtime</artifactId>
+                <version>${backend-template.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.innospots</groupId>
+                <artifactId>backend-template-core</artifactId>
+                <version>${backend-template.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.innospots</groupId>
+                <artifactId>backend-template-console</artifactId>
+                <version>${backend-template.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.innospots</groupId>
+                <artifactId>innospots-micro-app-ui</artifactId>
+                <version>${backend-template.ui.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

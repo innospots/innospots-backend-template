@@ -5,24 +5,31 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.innospots</groupId>
-        <artifactId>backend-template</artifactId>
+        <artifactId>backend-template-server</artifactId>
         <version>${backend-template.version}</version>
     </parent>
 
-    <artifactId>backend-template-core</artifactId>
+    <artifactId>backend-template-server-api</artifactId>
 
     <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.innospots</groupId>
-            <artifactId>innospots-workflow-core</artifactId>
+            <artifactId>backend-template-runtime</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-server-base</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-connector-importer</artifactId>
         </dependency>
     </dependencies>
 

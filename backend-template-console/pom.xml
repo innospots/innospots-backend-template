@@ -9,20 +9,17 @@
         <version>${backend-template.version}</version>
     </parent>
 
-    <artifactId>backend-template-core</artifactId>
+    <artifactId>backend-template-console</artifactId>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.innospots</groupId>
-            <artifactId>innospots-workflow-core</artifactId>
+            <artifactId>backend-template-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-workflow-console</artifactId>
         </dependency>
     </dependencies>
 

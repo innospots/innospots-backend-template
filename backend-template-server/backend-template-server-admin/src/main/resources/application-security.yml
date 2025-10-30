@@ -1,0 +1,117 @@
+innospots:
+  security:
+    enabled: true
+    mode: BASIC
+#    mode: OAUTH
+    tokenSigningKey: 696e6e6f73706f74732d323032342d39
+    tokenIssuer: innospots
+    tokenExpTimeMinute: 180
+    open-super-admin-permission: true
+    open-oauth-registry: false
+    ignore-auth-paths:
+      - /innospots/api/plugin/info/asset/**
+      - /actuator/health
+      - /actuator/info
+      - /actuator/**
+      - /error
+      - /doc.html
+      - /webjars/**
+      - /isp/webhook/**
+      - /docs/**
+      - /manual/**
+      - /**/swagger-ui/**
+      - /h2-console/**
+      - /**/v3/api-docs/**
+      - /swagger-resources/**
+      - /innospots/api/login-auth/**
+      - /innospots/api/login-oauth/**
+      - /innospots/api/temp-token/**
+      - /innospots/api/i18n/locale/**/*.json
+      - /innospots/api/i18n/locale/**
+      - /innospots/api/i18n/language/list
+      - /innospots/api/test/**
+      - /innospots/api/image/**
+      - /innospots/api/workflow/flow-execution/resources/**
+      - /innospots/api/workflow/sse/**
+      - /innospots/api/workflow/stream/**
+      - /innospots/api/oauth2/callback/**
+      - /
+      - /403
+      - /*.svg
+      - /*.less
+      - /*.png
+      - /*.js
+      - /*.css
+      - /*.json
+      - /*.html
+      - /static/**
+      - /icons/**
+      - /favicon.ico
+      - /locales/**
+      - /apps/**
+      - /js/**
+      - /dashboard/image/**
+      - /monitor/**
+      - /monitor
+      - /oauth/callback/**
+      - /innospots/callback/oauth/**
+      - /innospots/api/server-info/**
+    ignore-permission-paths:
+      - /innospots/api/auth-token/**
+      - /innospots/api/access/**
+      - /innospots/api/navigation/items
+      - /innospots/api/data-sets/options/**
+      - /innospots/api/data-set/data/**
+      - /innospots/api/data-set/**
+      - /innospots/api/http/third/test/**
+      - /innospots/api/test/**
+      - /innospots/api/operate-log/**
+      - /innospots/api/workspace/**
+      - /innospots/api/login-log/**
+      - /innospots/api/user/**
+      - /innospots/api/dictionary/**
+      - /innospots/api/app/show/**
+      - /innospots/api/session/**
+      - /innospots/api/extension/installed/list/base-info/**
+      - /innospots/api/extension-store/**
+      - /innospots/api/project/owner/**
+    oauth-provider:
+      enabled: true
+      providers:
+        - providerName: google
+          enabled: true
+          icon: https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+          auth-info:
+            method: GET
+            url: https://accounts.google.com/o/oauth2/v2/auth
+            params:
+              response_type: code
+              client_id: ${google_oauth_client_id}
+              redirect_uri: ${innospots.config.host}/innospots/callback/oauth
+              scope: email profile
+              access_type: offline
+          token-info:
+            method: POST
+            url: https://oauth2.googleapis.com/token
+            params:
+              client_id: ${google_oauth_client_id}
+              client_secret: ${google_oauth_secret}
+              grant_type: authorization_code
+              redirect_uri: ${innospots.config.host}/innospots/callback/oauth
+              code: "{{code}}"
+            response:
+              access_token: "$.access_token"
+            error-response:
+              error: "$.error"
+          user-info:
+            method: GET
+            url: https://www.googleapis.com/oauth2/v2/userinfo
+            params:
+              access_token: "{{accessToken}}"
+            response:
+              email: "$.email"
+              pictureUrl: "$.picture"
+              name: "$.name"
+              providerUuid: "$.id"
+            error-response:
+              error: "$.error"

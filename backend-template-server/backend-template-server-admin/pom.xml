@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.innospots</groupId>
+        <artifactId>backend-template-server</artifactId>
+        <version>${backend-template.version}</version>
+    </parent>
+
+    <artifactId>backend-template-server-admin</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-schedule-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-libra-kernel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-project-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-libra-auth</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-page-ui</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-server-base</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-connector-importer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-micro-app-ui</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
