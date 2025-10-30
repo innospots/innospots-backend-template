@@ -14,16 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>io.innospots</groupId>
-            <artifactId>innospots-schedule-console</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.innospots</groupId>
             <artifactId>innospots-libra-kernel</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.innospots</groupId>
-            <artifactId>innospots-project-console</artifactId>
         </dependency>
 
         <dependency>
@@ -43,12 +34,46 @@
 
         <dependency>
             <groupId>io.innospots</groupId>
+            <artifactId>innospots-workflow-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-app-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-app-visitor</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-schedule-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-project-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-approve-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
             <artifactId>innospots-connector-importer</artifactId>
         </dependency>
 
         <dependency>
             <groupId>io.innospots</groupId>
             <artifactId>innospots-micro-app-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.innospots</groupId>
+            <artifactId>innospots-ui</artifactId>
         </dependency>
     </dependencies>
 

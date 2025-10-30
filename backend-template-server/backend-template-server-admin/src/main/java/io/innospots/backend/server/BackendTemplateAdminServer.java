@@ -18,7 +18,9 @@
 
 package io.innospots.backend.server;
 
-import io.innospots.ai.core.AiCoreImporter;
+import io.innospots.app.console.ApplicationConsoleImporter;
+import io.innospots.app.visitor.ApplicationVisitorImporter;
+import io.innospots.approve.console.ApproveConsoleImporter;
 import io.innospots.base.server.ServiceRegistryHolder;
 import io.innospots.base.server.ServiceType;
 import io.innospots.libra.kernel.LibraKernelImporter;
@@ -26,6 +28,7 @@ import io.innospots.libra.security.LibraAuthImporter;
 import io.innospots.project.console.ProjectConsoleImporter;
 import io.innospots.schedule.console.ScheduleConsoleImporter;
 import io.innospots.server.base.ServerConfigImporter;
+import io.innospots.workflow.console.WorkflowConsoleImporter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration;
@@ -45,6 +48,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ScheduleConsoleImporter
 @ServerConfigImporter
 @EnableScheduling
+@WorkflowConsoleImporter
+@ApplicationConsoleImporter
+@ApplicationVisitorImporter
+@ApproveConsoleImporter
 //@PluginConsoleImporter
 public class BackendTemplateAdminServer {
 

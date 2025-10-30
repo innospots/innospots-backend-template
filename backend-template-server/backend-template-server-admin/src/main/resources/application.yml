@@ -95,7 +95,7 @@ innospots:
       title: "Backend title"
       code: "backend-template"
       description: "Backend"
-      favicon: "/images/favicon.svg"
+      favicon: "/images/favicon.png"
       logo: "/images/logo.png"
       indexPage: "/"
       loginPage: "/login"
