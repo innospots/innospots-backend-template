@@ -10,18 +10,3 @@ spring:
     show-sql: true
     generate-ddl: false
 
-
-
-innospots:
-  config:
-    host: ${SERVER_HOST:http://localhost}:${server.port}
-  db:
-    driver-class-name: ${DB_DRIVER:com.mysql.cj.jdbc.Driver}
-    jdbc-url: jdbc:mysql://${DB_IP:mysql-staging-instance-1.csepowb19q5z.eu-west-1.rds.amazonaws.com}:${DB_PORT:3306}/${DB_NAME:pt_decision_pilot}?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
-    username: ${DB_USER:admin}
-    password: ${DB_PASSWORD:vvoUkJvz71SNt2EH4I6m}
-    maximum-pool-size: 16
-    minimum-idle: 4
-    pool-name: db-pool
-    max-lifetime: 1800000
-    idle-timeout: 600000 # millisecond,default ten minute

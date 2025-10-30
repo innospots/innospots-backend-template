@@ -18,6 +18,7 @@
 
 package io.innospots.backend.server;
 
+import io.innospots.ai.core.AiCoreImporter;
 import io.innospots.base.server.ServiceRegistryHolder;
 import io.innospots.base.server.ServiceType;
 import io.innospots.libra.kernel.LibraKernelImporter;
