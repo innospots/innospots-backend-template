@@ -64,6 +64,11 @@
 
         <dependency>
             <groupId>io.innospots</groupId>
+            <artifactId>backend-template-console</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.innospots</groupId>
             <artifactId>innospots-connector-importer</artifactId>
         </dependency>
 
