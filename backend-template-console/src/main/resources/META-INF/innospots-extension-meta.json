@@ -28,11 +28,11 @@
       "items": [
         {
           "name": "${dp.menu.variable.name:Page}",
-          "itemKey": "template-page",
-          "uri": "/mf/backend-template",
+          "itemKey": "template-hello-world",
+          "uri": "/mf/backend-template/hello-world",
           "i18nNames": {
-            "en_US": "Plain Page",
-            "zh_CN": "页面"
+            "en_US": "Hello World",
+            "zh_CN": "Hello World"
           }
         }
       ]
